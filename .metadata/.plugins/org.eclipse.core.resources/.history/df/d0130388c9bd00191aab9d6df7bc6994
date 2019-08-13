@@ -6,8 +6,10 @@ import io.appium.java_client.android.AndroidDriver;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import static java.time.Duration.ofMillis;
+
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -60,7 +62,7 @@ public class Estimation {
         wait = new WebDriverWait(appiumDriver, 600);
         System.out.println("otp");
        */
-            
+              
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/titletext"))).click();
            System.out.println("main page");  
      
@@ -70,19 +72,46 @@ public class Estimation {
            
            
            wait = new WebDriverWait(appiumDriver, 30);
-                 
+            
+          // swipescreen();
+           System.out.println("1");
+           
            TouchAction ts = new TouchAction(appiumDriver);
            
            System.out.println("2");
    		ts.press(PointOption.point(708, 533))
    		.waitAction(waitOptions(ofMillis(1000)))
    		.moveTo(PointOption.point(28, 533)).release().perform();
-   		
+   		//ts.press(207, 582).moveTo(8, -360).release().perform();
    	
            
+         //  appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/profilewicon")).click();
            
            
     }
-}
+
+	// private void swipescreen() {
+	/*	// TODO Auto-generated method stub
+		Dimension dim = appiumDriver.manage().window().getSize();
+		int height = dim.getHeight();
+		int width = dim.getWidth();
+		
+		int startx=(int) (height*.50);
+	    int endx=(int) (height*.50);
+		int starty=(int) (width*.40);
+		int endy=(int) (width*.10);
+		
+		TouchAction action = new TouchAction(appiumDriver);
+		action.press(PointOption.point(startx, starty))
+		.moveTo(PointOption.point(endx, endy))
+		 .release()
+		 .perform();
+	*/
+		
+		
+  
+
+	
+	}
 
 
