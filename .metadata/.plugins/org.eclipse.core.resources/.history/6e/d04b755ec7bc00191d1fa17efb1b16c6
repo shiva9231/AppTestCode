@@ -1,0 +1,225 @@
+package tests;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.MobileDriver;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.concurrent.TimeUnit; 
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+public class RegistrationNew {
+	
+	public static WebDriverWait wait;
+    public static AppiumDriver<MobileElement> appiumDriver;
+    
+    @BeforeClass
+    public static void beforeclass() throws MalformedURLException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName", "Nexus 4 Android 5.1");
+        capabilities.setCapability("platformVersion", "5.1.1");
+        capabilities.setCapability("noReset", true);
+
+        capabilities.setCapability("appPackage", "project.labs.avviotech.com.rampg");
+    // capabilities.setCapability("appActivity", "project.labs.avviotech.com.rampg.SplashActivity");
+        capabilities.setCapability("appActivity", "project.labs.avviotech.com.rampg.HomeActivity");
+        appiumDriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
+        System.out.println(((AndroidDriver<MobileElement>) appiumDriver).currentActivity());
+
+        wait = new WebDriverWait(appiumDriver,500);
+
+    }
+    @Test
+    public void registartionNew() {
+ 
+    	/*
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/exc"))).click();
+        System.out.println("Loaded");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/countryCode"))).clear();
+        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/countryCode"))).sendKeys("91");
+        System.out.println("stdcode");
+        appiumDriver.findElementById("project.labs.avviotech.com.rampg:id/mobileNumber").sendKeys("9704021908"+"\n");
+        wait = new WebDriverWait(appiumDriver, 100);
+        System.out.println("number");    
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/login")).click();
+        System.out.println("login");
+        wait = new WebDriverWait(appiumDriver, 600);
+        System.out.println("otp");
+        
+    	*/
+    	
+    	   wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/titletext"))).click();
+           System.out.println("main page");  
+       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customerReg")).click();
+       
+        wait = new WebDriverWait(appiumDriver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/vehicleNumberEdit"))).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TA01CC0001");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_done")).click();
+        System.out.println("Vehicle Number entered");
+
+        
+       // Add new Vehicle        
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addnewVehicleName")).click();
+        wait = new WebDriverWait(appiumDriver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/vehiclebrand"))).click();
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("appium1");
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_done")).click();
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/vehiclemodel"))).click();
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("test1");
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_done")).click();
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/vehiclevarriant"))).click();
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("varianttest");
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_done")).click();
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
+    	
+    	
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/vehicleNameEdit")).click();
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("appium-test1-varianttest");
+    	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+    	
+    	System.out.println(" vehicle name");
+    	
+    	
+        // Add new Vehicle Category
+              
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addnewVehicleCateg")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/vehicle_category")).sendKeys("CatTest");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/vehiclecatEdit")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("CatTest");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+        
+        System.out.println("Vehicle Category");
+        
+         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/mobilenoEdit")).sendKeys("9121223603"+"\n");
+        
+        System.out.println("Mobile");
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customernameEdit")).sendKeys("Shiva k"+"\n");
+System.out.println("Name");
+        
+        
+        //Add New customer Source
+    
+        
+        wait = new WebDriverWait(appiumDriver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/addnewcustomersource"))).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/companyname")).sendKeys("CompanyName"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/gstnumber")).sendKeys("GSTno"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailid")).sendKeys("mail@mail.com"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/contactno")).sendKeys("1234567890"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/contactperson")).sendKeys("shiva"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/address")).sendKeys("Address");
+        appiumDriver.navigate().back();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/city")).sendKeys("city"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/state")).sendKeys("Telangana");
+        //appiumDriver.navigate().back();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/smsr")).click();
+        wait = new WebDriverWait(appiumDriver, 5);
+        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.TextView[1]")).click();
+        wait = new WebDriverWait(appiumDriver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/save"))).click(); 
+         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
+        wait = new WebDriverWait(appiumDriver, 5);
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customersourceEdit")).sendKeys("CompanyName");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+        System.out.println("Cx Source");
+        
+        		        
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("6541");
+		appiumDriver.navigate().back();     
+		System.out.println("Kms");
+		
+        // Add new technician
+ 
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addnewtechnician")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/workshopid")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("hyderabad");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).sendKeys("sample");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/fname")).sendKeys("First"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/lname")).sendKeys("last"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/password")).sendKeys("123456"+"\n");
+        wait = new WebDriverWait(appiumDriver, 5);
+        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[7]/android.widget.RelativeLayout[1]/android.widget.TextView")).click();
+        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='31 July 2019']")).click();
+        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/contactno")).sendKeys("9121223603");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
+		        
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/technicianEdit")).sendKeys("First");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+		System.out.println("Technician Added");
+		
+		//Add new Supervisor
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addnewsuperwisor")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/workshopid")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("hyderabad");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).sendKeys("Supervisor");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/fname")).sendKeys("Abcd"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/lname")).sendKeys("Efgh"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/password")).sendKeys("12345"+"\n");
+        
+        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[7]/android.widget.RelativeLayout[1]/android.widget.TextView")).click();
+        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='31 July 2019']")).click();
+        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]")).click();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/contactno")).sendKeys("9121223603");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
+       
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/superwisorEdit")).sendKeys("Abcd");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
+        
+        System.out.println("Supervisor Added");
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).sendKeys("shiva.shanrohi@gmail.com"+"\n");
+        wait = new WebDriverWait(appiumDriver, 5);
+        System.out.println("Email");
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customeraddressEdit")).sendKeys("hyd-81");
+        appiumDriver.navigate().back();
+        System.out.println("Address");
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class Estimation {
+	
+	public static WebDriverWait wait;
+    public static AppiumDriver<MobileElement> appiumDriver;
+   
+
+    @BeforeClass
+    public static void beforeclass() throws MalformedURLException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName", "Nexus 4 Android 5.1");
+        capabilities.setCapability("platformVersion", "5.1.1");
+        capabilities.setCapability("noReset", true);
+
+        capabilities.setCapability("appPackage", "project.labs.avviotech.com.rampg");
+      // capabilities.setCapability("appActivity", "project.labs.avviotech.com.rampg.SplashActivity");
+      capabilities.setCapability("appActivity", "project.labs.avviotech.com.rampg.HomeActivity");
+        appiumDriver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
+}
