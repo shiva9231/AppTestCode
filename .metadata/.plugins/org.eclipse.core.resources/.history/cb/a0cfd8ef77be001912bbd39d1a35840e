@@ -119,18 +119,13 @@ public class Estimation {
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 2");
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 3"); 
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 3");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 4"); 
 
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addInternalbtn"))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/notes"))).sendKeys("Internal note test");
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addCustomerbtn"))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/notes"))).sendKeys("Internal note test");
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/viewjc"))).click();
+        
        
 		
 	}

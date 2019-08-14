@@ -123,14 +123,7 @@ public class Estimation {
 
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addInternalbtn"))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/notes"))).sendKeys("Internal note test");
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addCustomerbtn"))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/notes"))).sendKeys("Internal note test");
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/viewjc"))).click();
+        
        
 		
 	}

@@ -70,7 +70,7 @@ public class NewRegistration1 {
        /////code for popup vehicle number till done
         wait = new WebDriverWait(appiumDriver,5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/vehicleNumberEdit"))).click();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TT01AP0002");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TT01AP0001");
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_done")).click();
         // vehicle name
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/vehicleNameEdit")).click();
@@ -83,7 +83,7 @@ public class NewRegistration1 {
         //code for vehicle category
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/mobilenoEdit")).sendKeys("9704021908"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/mobilenoEdit")).sendKeys("9121223603"+"\n");
         
         wait = new WebDriverWait(appiumDriver, 20);
         
@@ -94,7 +94,7 @@ public class NewRegistration1 {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
        //code same as vehicle model
         wait = new WebDriverWait(appiumDriver, 20);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("8520");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("6541");
         appiumDriver.navigate().back();
         wait = new WebDriverWait(appiumDriver, 20);
         
@@ -115,7 +115,7 @@ public class NewRegistration1 {
         appiumDriver.navigate().back();
         wait = new WebDriverWait(appiumDriver, 20);
         
-         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();
+        // appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();
       
         
     }

@@ -73,7 +73,7 @@ public class Estimation {
            
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0002");
            
-           wait = new WebDriverWait(appiumDriver, 500);     
+           wait = new WebDriverWait(appiumDriver, 50);     
            
            TouchAction ts = new TouchAction(appiumDriver);
            ts.press(PointOption.point(708, 533))
@@ -108,30 +108,44 @@ public class Estimation {
 		// TODO Auto-generated method stub
 		System.out.println("4");
 		// appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/jobcardicon")).click();
-		wait = new WebDriverWait(appiumDriver, 50);
-	
-		 //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/titletext"))).click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addbtn"))).click();
-		//appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
+		wait = new WebDriverWait(appiumDriver, 30);
+		/*
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
 		wait = new WebDriverWait(appiumDriver, 30);
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 1");
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 2");
 		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 3"); 
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 3");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 4");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 5");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 6");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 7");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 8");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/compaints")).sendKeys("complaint 9");
+		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
+		*/
 
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
+        TouchAction ts1 = new TouchAction(appiumDriver);
+        ts1.press(PointOption.point(681, 698))
+	       .waitAction(waitOptions(ofMillis(1000)))
+		   .moveTo(PointOption.point(45, 656)).release().perform();
+        
+        // Spare
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
+        wait = new WebDriverWait(appiumDriver, 30);
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
+        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/inputSearch"))).sendKeys("12566");
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addInternalbtn"))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/notes"))).sendKeys("Internal note test");
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addCustomerbtn"))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/notes"))).sendKeys("Internal note test");
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/viewjc"))).click();
-       
 		
 	}
 }
