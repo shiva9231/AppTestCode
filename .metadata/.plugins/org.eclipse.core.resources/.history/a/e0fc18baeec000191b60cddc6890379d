@@ -168,7 +168,7 @@ public class Estimation {
         
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("pol oil");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("12566");
         Thread.sleep(3000);
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).sendKeys("2");
@@ -185,13 +185,15 @@ public class Estimation {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("8708 40");
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
         wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/common_alert_header"), "Notification"));   
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/common_alert_ok")).click();
-        Thread.sleep(2000);
         
+        
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
+        Thread.sleep(2000);
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("pol oil");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("hose pipe 1*3/4");
         Thread.sleep(3000);
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).sendKeys("3");

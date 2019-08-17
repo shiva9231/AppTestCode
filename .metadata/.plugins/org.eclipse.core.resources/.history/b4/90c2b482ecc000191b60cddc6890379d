@@ -106,7 +106,6 @@ public class NewRegistration1 {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         
         
-        
         //code same as above
         
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).sendKeys("shiva.shanrohi@gmail.com"+"\n");

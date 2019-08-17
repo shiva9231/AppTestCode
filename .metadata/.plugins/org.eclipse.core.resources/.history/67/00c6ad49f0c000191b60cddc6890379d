@@ -168,7 +168,7 @@ public class Estimation {
         
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("pol oil");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("12566");
         Thread.sleep(3000);
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).sendKeys("2");
