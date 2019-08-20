@@ -109,7 +109,7 @@ public class Estimation {
 		Thread.sleep(5000);
 	
 		 //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/titletext"))).click();
-			
+		/*		
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/addbtn"))).click();
 		//appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
 		Thread.sleep(5000);
@@ -158,14 +158,14 @@ public class Estimation {
 	    appiumDriver.navigate().back();
 	    
 	    wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/titletext"), "Job Card / Estimation"));
-	    
+*/	    
 	    //spares
 	    
 	    TouchAction tspare = new TouchAction(appiumDriver);
         tspare.press(PointOption.point(615, 765))
 	       .waitAction(waitOptions(ofMillis(1000)))
 		   .moveTo(PointOption.point(26, 765)).release().perform();
-      
+        
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("12566");
@@ -177,8 +177,10 @@ public class Estimation {
         Thread.sleep(1000);
        
         if(appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/quantity")).isDisplayed())
-        {        	
+        {
+        	System.out.println("if1");
         	appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/quantity")).click();
+        	
         }
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).clear();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).sendKeys("5210");
@@ -234,90 +236,9 @@ public class Estimation {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partvalue")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("8708 92");
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-        Thread.sleep(1000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
         
+
         
-        Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/jccheckbox")).click();
-		Thread.sleep(2000);
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/deletebtn")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/tv_yes"))).click();
-		Thread.sleep(2000);
-		
-		appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/printbtn")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/detailed"))).click();
-		Thread.sleep(10000);
-		 appiumDriver.navigate().back();
-		 
-		 // Service
-		 
-		 TouchAction tservice = new TouchAction(appiumDriver);
-	        tservice.press(PointOption.point(615, 765))
-		       .waitAction(waitOptions(ofMillis(1000)))
-			   .moveTo(PointOption.point(26, 765)).release().perform();
-	        
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addbtn")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("general");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).clear();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).sendKeys("1");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).clear();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).sendKeys("2500");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partvalue")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("998714");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
-	        
-	        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/common_alert_header"), "Notification"));   
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/common_alert_ok")).click();
-	        Thread.sleep(2000);
-	        
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("ac service");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).clear();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).sendKeys("1");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).clear();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).sendKeys("5000");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partvalue")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("998714");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addtolist")).click();
-	        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/common_alert_header"), "Notification"));   
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/common_alert_ok")).click();
-	        Thread.sleep(2000);
-	        
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/servicename")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("wash");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).clear();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partqty")).sendKeys("1");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).clear();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partprice")).sendKeys("1000");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/partvalue")).click();
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("998714");
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-	        
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
-	        Thread.sleep(5000);
-	        
-	        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/jccheckbox")).click();
-			Thread.sleep(2000);
-			appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/deletebtn")).click();
-			wait.until(ExpectedConditions.elementToBeClickable(By.id("android:id/button1"))).click();
-			Thread.sleep(2000);
-			
-			appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/printbtn")).click();
-			wait.until(ExpectedConditions.elementToBeClickable(By.id("project.labs.avviotech.com.rampg:id/detailed"))).click();
-			Thread.sleep(10000);
-			appiumDriver.navigate().back();
-	        
-	        
-	        
-	        
-		
 	}
 }
 
