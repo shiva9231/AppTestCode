@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Coupon" project="GMSapp" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="Coupon" time="77.695">
+    <testcase name="coupon" classname="Coupon" time="77.695"/>
+  </testsuite>
+</testrun>
