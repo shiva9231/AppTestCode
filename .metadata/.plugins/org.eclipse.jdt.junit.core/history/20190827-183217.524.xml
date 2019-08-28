@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="alerts" project="GMSapp" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="alerts" time="68.193">
-    <testcase name="Alert" classname="alerts" time="68.193"/>
-  </testsuite>
-</testrun>

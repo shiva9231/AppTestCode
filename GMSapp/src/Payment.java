@@ -71,4 +71,6 @@ public class Payment {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
         Thread.sleep(5000);   
         
-        
+    }
+    
+}    
