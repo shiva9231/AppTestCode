@@ -105,7 +105,7 @@ public class SCinspro {
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
        Thread.sleep(10000);
       
-      */ 
+     
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("InsCompany");
        Thread.sleep(2000);
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/editIcon")).click();
@@ -130,7 +130,21 @@ public class SCinspro {
                
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
       Thread.sleep(3000);
-    
+ */     
+      //Delete
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("InsCompany");
+        Thread.sleep(2000);
+      appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/deleteIcon")).click();
+      wait.until(ExpectedConditions.textToBe(By.id("android:id/message"), "Are you sure?"));
+      appiumDriver.findElement(By.id("android:id/button2")).click();
+      System.out.println("Cancelled");
+      Thread.sleep(1000);
+      appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/deleteIcon")).click();
+      wait.until(ExpectedConditions.textToBe(By.id("android:id/message"), "Are you sure?"));
+      appiumDriver.findElement(By.id("android:id/button1")).click();
+      System.out.println("Deleted");
+      
+      
     }
     
 }

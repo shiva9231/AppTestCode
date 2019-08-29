@@ -114,7 +114,7 @@ public class SCcxsource {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/save")).click();
        Thread.sleep(3000);
        
-      */ 
+   
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("BlueBird");
        Thread.sleep(2000);
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/editLayout")).click();
