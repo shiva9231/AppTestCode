@@ -16,7 +16,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Discount {
+public class Reports {
 
 	public static WebDriverWait wait;
     public static AppiumDriver<MobileElement> appiumDriver;
@@ -38,11 +38,9 @@ public class Discount {
         System.out.println(((AndroidDriver<MobileElement>) appiumDriver).currentActivity());
         wait = new WebDriverWait(appiumDriver,500);
 
-
 }
-
     @Test
-    public void discount() throws InterruptedException {
+    public void reports() throws InterruptedException {
     
     	/*
    	 wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/exc"))).click();
@@ -60,37 +58,20 @@ public class Discount {
        wait = new WebDriverWait(appiumDriver, 600);
        System.out.println("otp");
       */
-    	
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/titletext"))).click();
         System.out.println("main page");  
         Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
-        Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
-        Thread.sleep(5000); 
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/discountText")).click();
-        
-        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/titletext"), "Discount"));
-        
-        //overall Discount
-        
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/type")).click();
-        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/tv_heading"), "Select Type"));
-        System.out.println("ok");
+
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/menuIcon")).click();
+        Thread.sleep(2000);
+        appiumDriver.findElement(By.xpath("//*[@text='Reports']")).click();
         Thread.sleep(1000);
-        // amount  
-        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.TextView[2]")).click();
         
-     //%  appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.TextView[1]")).click();
-        
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/value")).clear();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/value")).sendKeys("10");
-        
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/saveall")).click();
-        
-        // Line discount
-       
+        TouchAction ttax = new TouchAction(appiumDriver);
+        ttax.press(PointOption.point(410, 1000))
+	       .waitAction(waitOptions(ofMillis(1000)))
+		   .moveTo(PointOption.point(410, 500)).release().perform();
+        Thread.sleep(5000);
         
     }
-    }
+}

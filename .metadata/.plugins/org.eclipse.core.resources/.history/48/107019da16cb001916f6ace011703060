@@ -88,7 +88,6 @@ public class ServiceHistory {
            
            wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/titletext"), "Service History"));
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
-           appiumDriver.navigate().back();
            
          /*  //Discount on main screen
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/discountLayout")).click();
@@ -108,7 +107,7 @@ public class ServiceHistory {
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/saveall")).click();
            
          */  
-      /*     //Paid
+           //Paid
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/paidLayout")).click();
            
            wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/titletext"), "Payment Details"));
@@ -122,8 +121,8 @@ public class ServiceHistory {
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/pamount")).sendKeys("100");
            
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/savei")).click();
-           Thread.sleep(5000);
-       */    
+           Thread.sleep(1000);
+           
            
            //Invoice print
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/printIcon")).click();
@@ -132,15 +131,7 @@ public class ServiceHistory {
            //Revert
            appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/delete_icon")).click();
            
-           Thread.sleep(1000);
-           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/revert_reason")).click();
-           Thread.sleep(2000);
-           appiumDriver.findElement(By.id("")).sendKeys("calc");
-           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
-           Thread.sleep(1000);
-           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/otherreason")).sendKeys("Calc mistake");
            
-           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/revert")).click();
            
     }
 }
