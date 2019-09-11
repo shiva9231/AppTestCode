@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="1" name="GMSapp" annotations="JDK" parallel="tests">
+         
+  <test name="NewRegistration1">
+	 <classes>
+	   <class name="(default package)"/>
+	 </classes>
+   </test>
+   
+  
+</suite>

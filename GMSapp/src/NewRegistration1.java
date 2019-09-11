@@ -41,7 +41,7 @@ public class NewRegistration1 {
     }
     
     @Test
-    public void registartion() {
+    public void registration() {
      
     	/*
     	 wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/exc"))).click();
@@ -70,11 +70,11 @@ public class NewRegistration1 {
        /////code for popup vehicle number till done
         wait = new WebDriverWait(appiumDriver,5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/vehicleNumberEdit"))).click();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TT01AP0002");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TT01AP0008");
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_done")).click();
         // vehicle name
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/vehicleNameEdit")).click();
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("jeep");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("polo");
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
         
         //code for vehicle model 
@@ -87,14 +87,14 @@ public class NewRegistration1 {
         
         wait = new WebDriverWait(appiumDriver, 20);
         
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customernameEdit")).sendKeys("Shiva k"+"\n");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customernameEdit")).sendKeys("Shiva"+"\n");
         wait = new WebDriverWait(appiumDriver, 20);
         
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customersourceEdit")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/tv_item")).click();
        //code same as vehicle model
         wait = new WebDriverWait(appiumDriver, 20);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("8520");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("1250");
         appiumDriver.navigate().back();
         wait = new WebDriverWait(appiumDriver, 20);
         

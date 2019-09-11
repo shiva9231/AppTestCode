@@ -66,7 +66,7 @@ public class Done {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
         Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
         Thread.sleep(5000);   
         
         TouchAction tdon = new TouchAction(appiumDriver);
@@ -79,7 +79,7 @@ public class Done {
         Thread.sleep(1000);
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/duedateEdit")).click();
         Thread.sleep(1000);
-        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='31 August 2019']")).click();
+        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='30 September 2019']")).click();
         appiumDriver.findElement(By.id("android:id/button1")).click();
         Thread.sleep(1000);
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();

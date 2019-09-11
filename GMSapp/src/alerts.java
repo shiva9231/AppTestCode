@@ -65,7 +65,7 @@ public class alerts {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
         Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
         Thread.sleep(5000);   
         
         TouchAction talt = new TouchAction(appiumDriver);
@@ -81,7 +81,7 @@ public class alerts {
         Thread.sleep(5000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
         Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
         Thread.sleep(5000);   
         
         TouchAction talt1 = new TouchAction(appiumDriver);

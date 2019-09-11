@@ -67,11 +67,11 @@ public class InsDet {
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
           wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
           Thread.sleep(5000);
-          appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0012");
+          appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
  Thread.sleep(5000);   
           
-          TouchAction t2nd = new TouchAction(appiumDriver);
-          t2nd.press(PointOption.point(708, 533))
+          TouchAction insd = new TouchAction(appiumDriver);
+          insd.press(PointOption.point(708, 533))
   	       .waitAction(waitOptions(ofMillis(1000)))
   		   .moveTo(PointOption.point(28, 533)).release().perform();
           
@@ -80,22 +80,23 @@ public class InsDet {
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/insurancewicon")).click();
           wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/titletext"), "Insurance"));
           //policy number
+        
+         
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/policynoEdit")).sendKeys("22ws541");
           Thread.sleep(1000);
           
           //claim
-          appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/claimEdit")).click();
-         
+          insd.tap(PointOption.point(386, 429)).perform();
           Thread.sleep(2000);
-          wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/tv_heading"), "Insurance Claim"));
-          Thread.sleep(2000);
-          System.out.println("12");
-          appiumDriver.findElement(By.xpath("//*[@index,'0']")).click();
+       
+         insd.tap(PointOption.point(400, 628)).perform();
+         Thread.sleep(2000);
+       
           System.out.println("222");
-          Thread.sleep(2000);
+          
           //ClaimType
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/claimTypeEdit")).click();
-          appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.TextView[1]")).click();
+          insd.tap(PointOption.point(353, 667)).perform();
           Thread.sleep(1000);
           //ProvideName
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/providerEdit")).click();
@@ -110,11 +111,13 @@ public class InsDet {
           appiumDriver.findElement(By.xpath("//android.widget.TextView[@content-desc='2021']")).click();
           appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='30 September 2021']")).click();
           appiumDriver.findElement(By.id("android:id/button1")).click();
+         Thread.sleep(2000);
           
-          TouchAction ttax1 = new TouchAction(appiumDriver);
-          ttax1.press(PointOption.point(517, 1087))
-  	       .waitAction(waitOptions(ofMillis(1000)))
-  		   .moveTo(PointOption.point(517, 304)).release().perform();
+         insd.longPress(PointOption.point(517, 1160)).waitAction(waitOptions(ofMillis(1000))).moveTo(PointOption.point(517, 55)).release().perform();
+         System.out.println("1st");
+         insd.longPress(PointOption.point(517, 1160)).waitAction(waitOptions(ofMillis(1000))).moveTo(PointOption.point(517, 55)).release().perform();
+          System.out.println("2nd");
+          insd.longPress(PointOption.point(517, 1160)).waitAction(waitOptions(ofMillis(1000))).moveTo(PointOption.point(517, 55)).release().perform();
           Thread.sleep(5000);
          
           
@@ -122,12 +125,12 @@ public class InsDet {
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/pilicyexcessedit")).sendKeys("1000");
           appiumDriver.navigate().back();
           //submit
-         // appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();
-         
-          
-          
-          
+          insd.tap(PointOption.point(353, 1110)).perform();
+          wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/common_alert_ok"), "OK"));
+          appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/common_alert_ok")).click();
+
     }
+    
 }
           
           

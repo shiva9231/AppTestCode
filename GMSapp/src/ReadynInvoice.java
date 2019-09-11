@@ -68,28 +68,30 @@ public class ReadynInvoice {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
         Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
-        Thread.sleep(5000);   
+//        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
+//        Thread.sleep(5000);   
+//        TouchAction tred = new TouchAction(appiumDriver);
+//        tred.press(PointOption.point(708, 533))
+//	       .waitAction(waitOptions(ofMillis(1000)))
+//		   .moveTo(PointOption.point(28, 533)).release().perform();
+//        Thread.sleep(5000); 
+//        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/readywicon")).click();
+//        Thread.sleep(1000);
+//        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/common_alert_header"), "Mark the vehicle ready"));
+//        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/yes_wo_sms")).click();
+//        Thread.sleep(10000);
+//        appiumDriver.navigate().back();
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
+        Thread.sleep(10000);  
+        
         TouchAction tred = new TouchAction(appiumDriver);
         tred.press(PointOption.point(708, 533))
 	       .waitAction(waitOptions(ofMillis(1000)))
 		   .moveTo(PointOption.point(28, 533)).release().perform();
-        Thread.sleep(5000); 
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/readywicon")).click();
-        Thread.sleep(1000);
-        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/common_alert_header"), "Mark the vehicle ready"));
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/yes_wo_sms")).click();
-        Thread.sleep(10000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
-        Thread.sleep(5000);  
-        TouchAction tred1 = new TouchAction(appiumDriver);
-        tred1.press(PointOption.point(708, 533))
-	       .waitAction(waitOptions(ofMillis(1000)))
-		   .moveTo(PointOption.point(28, 533)).release().perform();
-        Thread.sleep(5000); 
+        Thread.sleep(10000); 
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/invoicewicon")).click();
         Thread.sleep(5000);
-        //wait.until(ExpectedConditions.textToBe(By.xpath("//[@class='android.widget.TextView'] and [@index=0]"), "Select Bill Type"));
+        wait.until(ExpectedConditions.textToBe(By.id("project.labs.avviotech.com.rampg:id/radioButton1"), "Detailed"));
     
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/radioButton1")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/sgstradio")).click();

@@ -1,10 +1,6 @@
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import static io.appium.java_client.touch.WaitOptions.waitOptions;
-import io.appium.java_client.touch.offset.PointOption;
-import static java.time.Duration.ofMillis;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.junit.BeforeClass;

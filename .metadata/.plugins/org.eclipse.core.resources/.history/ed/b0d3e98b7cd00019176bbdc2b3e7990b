@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name=".NewRegistration1"/>
+      <class name=".SCmsg"/>
+      <class name=".InsEst"/>
+      <class name=".EditProfile"/>
+      <class name=".SCconsumables"/>
+      <class name=".ReadynInvoice"/>
+      <class name=".SCinvcat"/>
+      <class name=".Discount"/>
+      <class name=".SClogs"/>
+      <class name=".alerts"/>
+      <class name=".SCtaxhsn"/>
+      <class name=".InsDet"/>
+      <class name=".testclass"/>
+      <class name=".SCbrands"/>
+      <class name=".gatepass"/>
+      <class name=".Estimation"/>
+      <class name=".SCvehcat"/>
+      <class name=".SCinsStat"/>
+      <class name=".Payment"/>   
+      <class name=".SCcxsource"/>
+      <class name=".ServiceHistory"/>
+      <class name=".SCinspro"/>
+      <class name=".Coupon"/>
+      <class name=".Done"/>
+      <class name=".cxsource"/>
+      <class name=".Reports"/>
+      <class name=".SCvehmod"/>
+      <class name=".SCsparems"/>
+                   
+      
+      
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

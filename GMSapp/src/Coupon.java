@@ -67,7 +67,7 @@ public class Coupon {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
         Thread.sleep(5000);
-        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("2538");
+        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0018");
         Thread.sleep(5000); 
           
         
@@ -88,12 +88,12 @@ public class Coupon {
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/addNew")).click();
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/eff_date")).click();
         
-        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='27 August 2019 selected']")).click();
+        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='05 September 2019 selected']")).click();
         appiumDriver.findElement(By.id("android:id/button1")).click();
         
         appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/exp_date")).click();
       // //android.view.View[@content-desc="27 August 2019 selected"]
-        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='31 August 2019']")).click();
+        appiumDriver.findElement(By.xpath("//android.view.View[@content-desc='30 September 2019']")).click();
         appiumDriver.findElement(By.id("android:id/button1")).click();
         
         

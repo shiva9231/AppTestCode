@@ -67,7 +67,7 @@ public class EditProfile {
           appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/serviceQueue")).click();
           wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/home_icon"))).isDisplayed();
           Thread.sleep(5000);
-          appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0012");
+          appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/searchEdit")).sendKeys("TT01AP0008");
           Thread.sleep(5000);   
           
           TouchAction t2nd = new TouchAction(appiumDriver);
@@ -82,7 +82,7 @@ public class EditProfile {
        //Veh Num
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/vehicleNumberEdit")).click();
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).clear();
-       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TT01AP0012");
+       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/inputSearch")).sendKeys("TT01AP0018");
        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("project.labs.avviotech.com.rampg:id/tv_done"))).click();
        
        // Veh name
@@ -117,7 +117,7 @@ public class EditProfile {
        //KMS
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).click();
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).clear();
-       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("7410");
+       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/kmdrivenEdit")).sendKeys("9620");
        //tech
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/technicianEdit")).click();
        Thread.sleep(1000);
@@ -134,12 +134,12 @@ public class EditProfile {
        //email
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).click();
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).clear();
-       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).sendKeys("mail@mail.com");
+       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/emailidEdit")).sendKeys("shiva.kumar@rampwms.com");
        appiumDriver.navigate().back();	
        //Address
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customeraddressEdit")).click();
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customeraddressEdit")).clear();
-       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customeraddressEdit")).sendKeys("Address");
+       appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/customeraddressEdit")).sendKeys("Add");
        appiumDriver.navigate().back();	
        //Submit
        appiumDriver.findElement(By.id("project.labs.avviotech.com.rampg:id/submit")).click();
